@@ -42,4 +42,8 @@ def fetch_data():
     print("Successfully saved data to src/data/scholar.json")
 
 if __name__ == '__main__':
-    fetch_data()
+    try:
+        fetch_data()
+    except Exception as e:
+        print(f"WARNING: Failed to fetch fresh data from Google Scholar: {e}")
+        print("Using the existing committed src/data/scholar.json file instead.")
