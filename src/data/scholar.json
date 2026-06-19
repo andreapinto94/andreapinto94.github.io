@@ -1,0 +1,81 @@
+{
+  "name": "Andrea Pinto",
+  "affiliation": "Saint Louis University",
+  "citedby": 125,
+  "hindex": 3,
+  "i10index": 2,
+  "publications": [
+    {
+      "title": "Privacy and efficiency of communications in federated split learning",
+      "year": "2023",
+      "citations": 84,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:u5HHmVD_uO8C"
+    },
+    {
+      "title": "Characterizing location management function performance in 5G core networks",
+      "year": "2022",
+      "citations": 23,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:u-x6o8ySG0sC"
+    },
+    {
+      "title": "Hercules: An emulation-based framework for transport layer measurements over 5g wireless networks",
+      "year": "2023",
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "Efficient distributed learning over lossy wireless networks",
+      "year": "2024",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:UeHWp8X0CEIC"
+    },
+    {
+      "title": "Poster: Transport-Aware Resource Block Allocation in 5G Slicing",
+      "year": "2024",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:qjMakFHDy7sC"
+    },
+    {
+      "title": "Experimenting with localization management functions in 5g core networks",
+      "year": "2022",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:d1gkVwhDpl0C"
+    },
+    {
+      "title": "Balancing Energy Efficiency and Infrastructure Knowledge in Cloud-to-Edge Task Distribution Systems",
+      "year": "2024",
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:2osOgNQ5qMEC"
+    },
+    {
+      "title": "Optimizing Model Pruning in Decentralized Learning Networks with DFL-Trim",
+      "year": "2025",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:LkGwnXOMwfcC"
+    },
+    {
+      "title": "Mitigating De-authentication DoS Attacks in 802.11 via eBPF and XDP",
+      "year": "2025",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:_FxGoFyzp5QC"
+    },
+    {
+      "title": "Energy Consumption of Quantized Federated Learning in Optical-Wireless Networks",
+      "year": "2025",
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:roLk4NBRz8UC"
+    },
+    {
+      "title": "MAESTRO: Supporting Real-Time Segmentation Networks on Surgical Systems via Edge Computing",
+      "year": "2025",
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:ufrVoPGSRksC"
+    },
+    {
+      "title": "Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://opendl.ifip-tc6.org/db/conf/networking/networking2026/1571261587.pdf"
+    }
+  ]
+}
