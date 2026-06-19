@@ -115,7 +115,7 @@ const getAuthors = (title) => {
       
       <!-- Hero / About Section -->
       <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-8">
-        <div class="md:col-span-8 space-y-6">
+        <div class="md:col-span-8 space-y-6 order-2 md:order-1">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
             CDN SRE @ ByteDance | PhD in Computer Science
@@ -156,10 +156,10 @@ const getAuthors = (title) => {
           </div>
         </div>
 
-        <div class="md:col-span-4 flex justify-center">
-          <div class="relative group w-64 h-64 md:w-full md:max-w-[300px] aspect-square">
-            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-slate-800 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div class="relative w-full h-full rounded-2xl border border-slate-800 bg-slate-900 overflow-hidden">
+        <div class="md:col-span-4 flex justify-center order-1 md:order-2">
+          <div class="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-full md:max-w-[300px] aspect-square">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-slate-800 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+            <div class="relative w-full h-full rounded-3xl border border-slate-800 bg-slate-900 overflow-hidden">
               <img 
                 src="/profile.JPG" 
                 alt="Andrea Pinto Profile Photo" 
