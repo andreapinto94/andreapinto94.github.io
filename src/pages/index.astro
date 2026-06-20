@@ -86,61 +86,36 @@ const getAuthors = (title) => {
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-
-    <style is:global>
-      body {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
-      }
-    </style>
-    <!-- JSON-LD Structured Data / Schema Markup -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Schema Markup -->
     <script type="application/ld+json" is:inline>
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Andrea Pinto",
+        "image": "https://andreapinto94.github.io/profile.JPG",
         "jobTitle": "Site Reliability Engineer",
         "worksFor": {
           "@type": "Organization",
-          "name": "ByteDance",
-          "url": "https://www.bytedance.com"
+          "name": "ByteDance"
         },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
-          "name": "Saint Louis University",
-          "url": "https://www.slu.edu"
+          "name": "Saint Louis University"
         },
-        "url": "https://andreapinto94.github.io",
-        "image": "https://andreapinto94.github.io/profile.JPG",
+        "url": "https://andreapinto94.github.io/",
         "sameAs": [
           "https://www.linkedin.com/in/andreapinto1994/",
           "https://github.com/andreapinto94",
           "https://www.instagram.com/andre_pinto94/",
           "https://scholar.google.com/citations?user=cM30-0YAAAAJ"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "San Francisco",
-          "addressRegion": "California",
-          "addressCountry": "US"
-        },
-        "knowsAbout": [
-          "Site Reliability Engineering",
-          "Distributed Systems",
-          "Content Delivery Networks",
-          "CDN",
-          "Computer Science",
-          "Machine Learning",
-          "Federated Learning"
         ]
       }
     </script>
   </head>
 
-  <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500/30 selection:text-blue-200 relative overflow-x-hidden">
+  <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500/30 selection:text-blue-200 relative">
     
     <!-- Background Glow Blobs -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none -z-10 opacity-20 overflow-hidden">
@@ -148,8 +123,8 @@ const getAuthors = (title) => {
       <div class="absolute top-[20%] right-[-10%] w-[45%] h-[50%] rounded-full bg-slate-900/50 blur-[130px]"></div>
     </div>
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-slate-900">
+    <!-- Navigation Header (Mobile Only) -->
+    <header class="lg:hidden sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-slate-900">
       <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" class="text-xl font-bold bg-gradient-to-r from-slate-100 to-blue-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
           Andrea Pinto
@@ -157,12 +132,14 @@ const getAuthors = (title) => {
         
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
-          <a href="#about" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">About</a>
-          <a href="#metrics" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Impact</a>
-          <a href="#publications" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Publications</a>
-          <a href="#timeline" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Journey</a>
-          <a href="#insights" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Insights</a>
-          <a href="#contact" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Contact</a>
+          <div class="flex items-center gap-6 lg:hidden">
+            <a href="#about" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">About</a>
+            <a href="#metrics" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Impact</a>
+            <a href="#publications" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Publications</a>
+            <a href="#timeline" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Journey</a>
+            <a href="#insights" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Insights</a>
+            <a href="#contact" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Contact</a>
+          </div>
           <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-500 hover:text-slate-100 transition-colors px-2.5 py-1 rounded-lg border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 transition-all flex items-center gap-1.5">
             <span>CV</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
@@ -198,11 +175,43 @@ const getAuthors = (title) => {
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-24">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12 relative">
+      
+      <!-- Sticky Sidebar -->
+      <aside class="hidden lg:block w-48 shrink-0 sticky top-24 self-start">
+        <div class="space-y-6 pb-12 h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar">
+          <a href="#" class="block text-lg font-bold text-slate-100 uppercase tracking-wider pl-4 hover:text-blue-400 transition-colors">Andrea Pinto</a>
+          <nav id="sidebar-nav" class="flex flex-col gap-1 border-l border-slate-800">
+            <a href="#about" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">About</a>
+            <a href="#metrics" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">Impact</a>
+            <a href="#publications" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">Publications</a>
+            <div class="pl-4 pr-2 py-1 flex flex-col gap-1 border-l border-slate-800/40 my-1 ml-4">
+              <a href="/phd-thesis" class="group flex items-center gap-2 pl-3 py-1 text-xs text-slate-500 hover:text-blue-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full border border-slate-700 bg-slate-950 group-hover:border-blue-500/50 group-hover:bg-blue-500/20 transition-colors"></span>
+                <span>PhD Thesis</span>
+              </a>
+              <a href="/plebiscito" class="group flex items-center gap-2 pl-3 py-1 text-xs text-slate-500 hover:text-blue-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full border border-slate-700 bg-slate-950 group-hover:border-blue-500/50 group-hover:bg-blue-500/20 transition-colors"></span>
+                <span>Plebiscito</span>
+              </a>
+              <a href="/flag" class="group flex items-center gap-2 pl-3 py-1 text-xs text-slate-500 hover:text-blue-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full border border-slate-700 bg-slate-950 group-hover:border-blue-500/50 group-hover:bg-blue-500/20 transition-colors"></span>
+                <span>FLAG</span>
+              </a>
+            </div>
+            <a href="#timeline" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">Journey</a>
+            <a href="#insights" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">Insights</a>
+            <a href="#contact" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-blue-500 transition-colors">Contact</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 space-y-24 min-w-0">
       
       <!-- Hero / About Section -->
-      <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-8">
-        <div class="md:col-span-8 space-y-6 order-2 md:order-1">
+      <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-8" itemscope itemtype="https://schema.org/Person">
+        <div class="md:col-span-7 space-y-6 order-2 md:order-1">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
             CDN SRE @ ByteDance | PhD in Computer Science
@@ -243,13 +252,15 @@ const getAuthors = (title) => {
           </div>
         </div>
 
-        <div class="md:col-span-4 flex justify-center order-1 md:order-2">
-          <div class="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-full md:max-w-[300px] aspect-square">
+        <div class="md:col-span-5 flex justify-center order-1 md:order-2">
+          <div class="relative group w-56 sm:w-72 md:w-full md:max-w-[380px] aspect-[4/5]">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-slate-800 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div class="relative w-full h-full rounded-3xl border border-slate-800 bg-slate-900/10 overflow-hidden">
               <img 
                 src="/profile.JPG" 
-                alt="Andrea Pinto Profile Photo" 
+                itemprop="image"
+                alt="Andrea Pinto - Site Reliability Engineer at ByteDance and Computer Science PhD" 
+                title="Andrea Pinto"
                 class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
@@ -331,6 +342,14 @@ const getAuthors = (title) => {
                 <p>Andrea Pinto</p>
                 <p class="text-blue-400/80 font-semibold tracking-wide uppercase">Saint Louis University</p>
               </div>
+              <div class="pt-4 mt-auto block">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-blue-500/30 bg-blue-500/5 text-blue-400 text-xs font-semibold group-hover:bg-blue-500/20 group-hover:text-blue-300 transition-all">
+                  <span>View Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </div>
             </div>
             <div class="flex items-center gap-3 shrink-0 self-start md:self-auto">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/10 text-slate-500 border border-slate-800">
@@ -398,6 +417,17 @@ const getAuthors = (title) => {
                       </p>
                     )}
                   </div>
+                  
+                  {hasUrl && (
+                    <div class="pt-4 mt-auto block">
+                      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-blue-500/30 bg-blue-500/5 text-blue-400 text-xs font-semibold group-hover:bg-blue-500/20 group-hover:text-blue-300 transition-all">
+                        <span>View Details</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <div class="flex items-center gap-3 shrink-0 self-start md:self-auto">
@@ -688,6 +718,7 @@ const getAuthors = (title) => {
       </section>
 
     </main>
+    </div>
 
     <!-- Client-Side Sorting Script -->
     <script>
