@@ -8,7 +8,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://andreapinto94.github.io',
   integrations: [sitemap()],
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
   vite: {
     plugins: [tailwindcss()]
   }

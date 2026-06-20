@@ -83,6 +83,9 @@ const getAuthors = (title) => {
     <meta property="twitter:description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Engineer (SRE) at ByteDance." />
     <meta property="twitter:image" content="https://andreapinto94.github.io/profile.JPG" />
     
+    <!-- Preload Critical Image Asset (LCP) -->
+    <link rel="preload" as="image" href="/profile.JPG" fetchpriority="high" />
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
