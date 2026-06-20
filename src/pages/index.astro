@@ -86,7 +86,11 @@ const getAuthors = (title) => {
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+    </noscript>
     
     <!-- Schema Markup -->
     <script type="application/ld+json" is:inline>
@@ -261,6 +265,8 @@ const getAuthors = (title) => {
                 itemprop="image"
                 alt="Andrea Pinto - Site Reliability Engineer at ByteDance and Computer Science PhD" 
                 title="Andrea Pinto"
+                fetchpriority="high"
+                decoding="async"
                 class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
