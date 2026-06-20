@@ -60,8 +60,8 @@ const getAuthors = (title) => {
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
-    <title>Andrea Pinto | CDN SRE @ ByteDance | PhD in Computer Science</title>
-    <meta name="description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Developer/Engineer at ByteDance." />
+    <title>Andrea Pinto | Site Reliability Engineer at ByteDance | Distributed Systems</title>
+    <meta name="description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Engineer (SRE) at ByteDance in San Francisco, CA, specializing in distributed systems and CDN performance optimization." />
     <meta name="keywords" content="Andrea Pinto, Site Reliability Engineer, SRE, SRD, PhD, Computer Science, Distributed Training, CDN, Content Delivery Networks" />
     <meta name="author" content="Andrea Pinto" />
     
@@ -78,6 +78,48 @@ const getAuthors = (title) => {
         font-family: 'Outfit', sans-serif;
       }
     </style>
+    <!-- JSON-LD Structured Data / Schema Markup -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrea Pinto",
+        "jobTitle": "Site Reliability Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ByteDance",
+          "url": "https://www.bytedance.com"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Saint Louis University",
+          "url": "https://www.slu.edu"
+        },
+        "url": "https://andreapinto94.github.io",
+        "image": "https://andreapinto94.github.io/profile.JPG",
+        "sameAs": [
+          "https://www.linkedin.com/in/andreapinto1994/",
+          "https://github.com/andreapinto94",
+          "https://www.instagram.com/andre_pinto94/",
+          "https://scholar.google.com/citations?user=cM30-0YAAAAJ"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco",
+          "addressRegion": "California",
+          "addressCountry": "US"
+        },
+        "knowsAbout": [
+          "Site Reliability Engineering",
+          "Distributed Systems",
+          "Content Delivery Networks",
+          "CDN",
+          "Computer Science",
+          "Machine Learning",
+          "Federated Learning"
+        ]
+      }
+    </script>
   </head>
 
   <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500/30 selection:text-blue-200 relative overflow-x-hidden">
@@ -153,7 +195,7 @@ const getAuthors = (title) => {
           </h1>
           
           <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
-            I am a Site Reliability Engineer (SRE) at <span class="text-blue-400 font-medium">ByteDance</span>, where I work on Content Delivery Network (CDN) distributed systems performance optimization. I recently defended my thesis and graduated with a Ph.D. in Computer Science from <span class="text-slate-300 font-medium">{scholarData.affiliation}</span>.
+            I am a Site Reliability Engineer (SRE) at <span class="text-blue-400 font-medium">ByteDance</span> based in <span class="text-slate-200 font-medium">San Francisco, California</span>, where I work on Content Delivery Network (CDN) distributed systems performance optimization. I recently defended my thesis and graduated with a Ph.D. in Computer Science from <span class="text-slate-300 font-medium">{scholarData.affiliation}</span>.
           </p>
 
           <div class="space-y-4 text-slate-400 leading-relaxed max-w-2xl text-sm md:text-base">
@@ -764,7 +806,7 @@ const getAuthors = (title) => {
     <!-- Footer -->
     <footer class="border-t border-slate-900 py-8 mt-24">
       <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
-        <p>&copy; {new Date().getFullYear()} Andrea Pinto. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Andrea Pinto &bull; San Francisco, California. All rights reserved.</p>
         <p>Built with Astro & Tailwind CSS</p>
       </div>
     </footer>
