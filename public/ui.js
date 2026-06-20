@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- SCROLL ANIMATIONS ---
-  const animateElements = document.querySelectorAll('.publication-item, section > div, main > div');
+  const animateElements = document.querySelectorAll('.publication-item');
   
   animateElements.forEach(el => {
     // Only animate if it doesn't already have a transform (like the glow blobs)
