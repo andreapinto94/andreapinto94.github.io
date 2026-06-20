@@ -56,7 +56,10 @@ const getAuthors = (title) => {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
@@ -64,6 +67,21 @@ const getAuthors = (title) => {
     <meta name="description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Engineer (SRE) at ByteDance in San Francisco, CA, specializing in distributed systems and CDN performance optimization." />
     <meta name="keywords" content="Andrea Pinto, Site Reliability Engineer, SRE, SRD, PhD, Computer Science, Distributed Training, CDN, Content Delivery Networks" />
     <meta name="author" content="Andrea Pinto" />
+    <link rel="canonical" href="https://andreapinto94.github.io/" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreapinto94.github.io/" />
+    <meta property="og:title" content="Andrea Pinto | Site Reliability Engineer" />
+    <meta property="og:description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Engineer (SRE) at ByteDance." />
+    <meta property="og:image" content="https://andreapinto94.github.io/profile.JPG" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://andreapinto94.github.io/" />
+    <meta property="twitter:title" content="Andrea Pinto | Site Reliability Engineer" />
+    <meta property="twitter:description" content="Academic portfolio and profile of Andrea Pinto, PhD in Computer Science from Saint Louis University and Site Reliability Engineer (SRE) at ByteDance." />
+    <meta property="twitter:image" content="https://andreapinto94.github.io/profile.JPG" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -139,13 +157,13 @@ const getAuthors = (title) => {
         
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
-          <a href="#about" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">About</a>
-          <a href="#metrics" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">Impact</a>
-          <a href="#publications" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">Publications</a>
-          <a href="#timeline" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">Journey</a>
-          <a href="#insights" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">Insights</a>
-          <a href="#contact" class="text-sm text-slate-400 hover:text-slate-100 transition-colors">Contact</a>
-          <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-slate-100 transition-colors px-2.5 py-1 rounded-lg border border-slate-800 bg-slate-900/50 hover:bg-slate-900 transition-all flex items-center gap-1.5">
+          <a href="#about" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">About</a>
+          <a href="#metrics" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Impact</a>
+          <a href="#publications" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Publications</a>
+          <a href="#timeline" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Journey</a>
+          <a href="#insights" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Insights</a>
+          <a href="#contact" class="text-sm text-slate-500 hover:text-slate-100 transition-colors">Contact</a>
+          <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-500 hover:text-slate-100 transition-colors px-2.5 py-1 rounded-lg border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 transition-all flex items-center gap-1.5">
             <span>CV</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -154,7 +172,7 @@ const getAuthors = (title) => {
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-slate-100 transition-colors cursor-pointer" aria-label="Toggle Mobile Menu">
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-500 hover:text-slate-100 transition-colors cursor-pointer" aria-label="Toggle Mobile Menu">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
@@ -164,13 +182,13 @@ const getAuthors = (title) => {
       <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden md:hidden border-b border-slate-900 bg-slate-950/95 backdrop-blur-md">
         <nav class="flex flex-col px-6 py-4 gap-4">
-          <a href="#about" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">About</a>
-          <a href="#metrics" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">Impact</a>
-          <a href="#publications" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">Publications</a>
-          <a href="#timeline" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">Journey</a>
-          <a href="#insights" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">Insights</a>
-          <a href="#contact" class="mobile-nav-link text-sm text-slate-400 hover:text-slate-100 transition-colors py-1">Contact</a>
-          <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav-link text-sm text-slate-300 hover:text-slate-100 transition-colors py-2 px-3 rounded-lg border border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-center flex items-center justify-center gap-1.5">
+          <a href="#about" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">About</a>
+          <a href="#metrics" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">Impact</a>
+          <a href="#publications" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">Publications</a>
+          <a href="#timeline" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">Journey</a>
+          <a href="#insights" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">Insights</a>
+          <a href="#contact" class="mobile-nav-link text-sm text-slate-500 hover:text-slate-100 transition-colors py-1">Contact</a>
+          <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav-link text-sm text-slate-300 hover:text-slate-100 transition-colors py-2 px-3 rounded-lg border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-center flex items-center justify-center gap-1.5">
             <span>Download CV</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -198,7 +216,7 @@ const getAuthors = (title) => {
             I am a Site Reliability Engineer (SRE) at <span class="text-blue-400 font-medium">ByteDance</span> based in <span class="text-slate-200 font-medium">San Francisco, California</span>, where I work on Content Delivery Network (CDN) distributed systems performance optimization. I recently defended my thesis and graduated with a Ph.D. in Computer Science from <span class="text-slate-300 font-medium">{scholarData.affiliation}</span>.
           </p>
 
-          <div class="space-y-4 text-slate-400 leading-relaxed max-w-2xl text-sm md:text-base">
+          <div class="space-y-4 text-slate-500 leading-relaxed max-w-2xl text-sm md:text-base">
             <p>
               My doctoral research was focused on networking systems for efficient distributed machine learning under the guidance of Dr. Flavio Esposito. Currently at ByteDance, I monitor platform performance and build automation to optimize the edge routing infrastructure and minimize network bottlenecks.
             </p>
@@ -208,16 +226,16 @@ const getAuthors = (title) => {
           </div>
 
           <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#publications" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all">
+            <a href="#publications" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500/50 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all">
               View Publications
             </a>
-            <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-slate-300 hover:text-slate-100 font-medium text-sm transition-all flex items-center gap-2">
+            <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-slate-300 hover:text-slate-100 font-medium text-sm transition-all flex items-center gap-2">
               <span>View Resume</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
               </svg>
             </a>
-            <a href="/docs/AndreaPinto_Resume.pdf" download class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/20 hover:bg-slate-900 text-slate-400 hover:text-slate-200 transition-all flex items-center justify-center" title="Download PDF Resume">
+            <a href="/docs/AndreaPinto_Resume.pdf" download class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/20 hover:bg-slate-900/10 text-slate-500 hover:text-slate-200 transition-all flex items-center justify-center" title="Download PDF Resume">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
@@ -228,7 +246,7 @@ const getAuthors = (title) => {
         <div class="md:col-span-4 flex justify-center order-1 md:order-2">
           <div class="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-full md:max-w-[300px] aspect-square">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-slate-800 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div class="relative w-full h-full rounded-3xl border border-slate-800 bg-slate-900 overflow-hidden">
+            <div class="relative w-full h-full rounded-3xl border border-slate-800 bg-slate-900/10 overflow-hidden">
               <img 
                 src="/profile.JPG" 
                 alt="Andrea Pinto Profile Photo" 
@@ -243,25 +261,25 @@ const getAuthors = (title) => {
       <section id="metrics" class="space-y-8 scroll-mt-20">
         <div class="border-t border-slate-900 pt-12">
           <h2 class="text-2xl font-bold tracking-tight">Academic Impact</h2>
-          <p class="text-sm text-slate-400 mt-1">Research influence and citation metrics from Google Scholar.</p>
+          <p class="text-sm text-slate-500 mt-1">Research influence and citation metrics from Google Scholar.</p>
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/20 backdrop-blur-sm hover:border-slate-800 transition-all relative overflow-hidden group">
-            <div class="absolute -right-4 -bottom-4 text-slate-900/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">#</div>
-            <span class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Total Citations</span>
+            <div class="absolute -right-4 -bottom-4 text-slate-100/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">#</div>
+            <span class="text-sm font-semibold text-slate-500 tracking-wider uppercase">Total Citations</span>
             <div class="text-4xl md:text-5xl font-black text-blue-400 mt-2">{scholarData.citedby}</div>
           </div>
           
           <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/20 backdrop-blur-sm hover:border-slate-800 transition-all relative overflow-hidden group">
-            <div class="absolute -right-4 -bottom-4 text-slate-900/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">h</div>
-            <span class="text-sm font-semibold text-slate-400 tracking-wider uppercase">h-index</span>
+            <div class="absolute -right-4 -bottom-4 text-slate-100/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">h</div>
+            <span class="text-sm font-semibold text-slate-500 tracking-wider uppercase">h-index</span>
             <div class="text-4xl md:text-5xl font-black text-slate-100 mt-2">{scholarData.hindex}</div>
           </div>
 
           <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/20 backdrop-blur-sm hover:border-slate-800 transition-all relative overflow-hidden group">
-            <div class="absolute -right-4 -bottom-4 text-slate-900/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">i10</div>
-            <span class="text-sm font-semibold text-slate-400 tracking-wider uppercase">i10-index</span>
+            <div class="absolute -right-4 -bottom-4 text-slate-100/30 text-8xl font-extrabold group-hover:scale-110 transition-transform duration-300">i10</div>
+            <span class="text-sm font-semibold text-slate-500 tracking-wider uppercase">i10-index</span>
             <div class="text-4xl md:text-5xl font-black text-slate-300 mt-2">{scholarData.i10index}</div>
           </div>
         </div>
@@ -272,7 +290,7 @@ const getAuthors = (title) => {
         <div class="border-t border-slate-900 pt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h2 class="text-2xl font-bold tracking-tight">Publications</h2>
-            <p class="text-sm text-slate-400 mt-1">Peer-reviewed papers and works.</p>
+            <p class="text-sm text-slate-500 mt-1">Peer-reviewed papers and works.</p>
           </div>
           <div class="flex items-center gap-3 self-start sm:self-auto flex-wrap">
             <span class="text-xs text-slate-500 font-medium">Sort by:</span>
@@ -280,11 +298,11 @@ const getAuthors = (title) => {
               <button id="sort-citations" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-sm transition-all cursor-pointer" aria-label="Sort by Citations">
                 Citations
               </button>
-              <button id="sort-year" class="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-slate-200 transition-all cursor-pointer" aria-label="Sort by Year">
+              <button id="sort-year" class="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-500 hover:text-slate-200 transition-all cursor-pointer" aria-label="Sort by Year">
                 Year
               </button>
             </div>
-            <div class="text-xs text-slate-500 font-medium px-3 py-2 rounded-lg bg-slate-900 border border-slate-800">
+            <div class="text-xs text-slate-500 font-medium px-3 py-2 rounded-lg bg-slate-900/10 border border-slate-800">
               {sortedPapers.length} Publications
             </div>
           </div>
@@ -292,15 +310,15 @@ const getAuthors = (title) => {
 
         <!-- Featured Works (Pinned) -->
         <div class="space-y-4">
-          <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider pl-1">Featured Works & Ph.D. Dissertation</div>
+          <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider pl-1">Ph.D. Dissertation</div>
           
           <!-- Ph.D. Thesis Card -->
           <a 
             href="/phd-thesis"
-            class="publication-item p-6 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 block text-left cursor-pointer"
+            class="publication-item p-6 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/50/10 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 block text-left cursor-pointer"
           >
             <div class="space-y-2.5 max-w-3xl">
-              <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30">
+              <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-blue-500/50/20 text-blue-300 border border-blue-500/30">
                 🎓 Ph.D. Dissertation
               </span>
               <h3 class="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors flex items-center gap-1.5 flex-wrap">
@@ -309,100 +327,23 @@ const getAuthors = (title) => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
               </h3>
-              <div class="flex flex-col gap-1 text-xs text-slate-400 font-medium">
+              <div class="flex flex-col gap-1 text-xs text-slate-500 font-medium">
                 <p>Andrea Pinto</p>
                 <p class="text-blue-400/80 font-semibold tracking-wide uppercase">Saint Louis University</p>
               </div>
             </div>
             <div class="flex items-center gap-3 shrink-0 self-start md:self-auto">
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900 text-slate-400 border border-slate-800">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/10 text-slate-500 border border-slate-800">
                 2026
               </span>
             </div>
           </a>
 
-          <!-- Plebiscito Best Paper Card -->
-          <div 
-            class="publication-item p-6 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 relative text-left"
-          >
-            <!-- Full card clickable overlay linking to the paper -->
-            <a 
-              href="https://opendl.ifip-tc6.org/db/conf/networking/networking2026/1571261587.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="absolute inset-0 z-0 rounded-2xl cursor-pointer"
-              aria-label="View Plebiscito Paper"
-            ></a>
 
-            <div class="space-y-2.5 max-w-3xl relative z-10 pointer-events-none">
-              <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                🏆 Best Paper Award (Honorable Mention)
-              </span>
-              <h3 class="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors flex items-center gap-1.5 flex-wrap">
-                Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-slate-500 group-hover:text-blue-400 shrink-0">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </h3>
-              <div class="flex flex-col gap-1 text-xs text-slate-400 font-medium">
-                <p>A. Pinto, S. Galantino, F. Risso, & F. Esposito</p>
-                <p class="text-blue-400/80 font-semibold tracking-wide uppercase">IFIP Networking</p>
-              </div>
-              <div class="pt-2 pointer-events-auto">
-                <a 
-                  href="/docs/honorable_mention_best_paper_award_Andrea_Pinto_Stefano_Galantino_Fulvio_Risso_Flavio_Esposito.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-amber-500/30 bg-amber-500/5 text-amber-400 text-xs font-semibold hover:bg-amber-500/15 transition-all cursor-pointer"
-                >
-                  <span>View Honorable Mention Certificate PDF</span>
-                </a>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 shrink-0 self-start md:self-auto relative z-10 pointer-events-none">
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900 text-slate-400 border border-slate-800">
-                2026
-              </span>
-            </div>
-          </div>
-
-          <!-- Characterizing Location Management Best Paper Card -->
-          <a 
-            href="https://nfvsdn2022.ieee-nfvsdn.org/program/award-recipients/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="publication-item p-6 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 block text-left cursor-pointer"
-          >
-            <div class="space-y-2.5 max-w-3xl">
-              <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                🏆 Best Paper Award
-              </span>
-              <h3 class="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors flex items-center gap-1.5 flex-wrap">
-                Characterizing Location Management Function Performances in 5G Core Networks
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-slate-500 group-hover:text-blue-400 shrink-0">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </h3>
-              <div class="flex flex-col gap-1 text-xs text-slate-400 font-medium">
-                <p>A. Pinto, G. Santaromita, C. Fiandrino, D. Giustiniano, & F. Esposito</p>
-                <p class="text-blue-400/80 font-semibold tracking-wide uppercase">IEEE NFV-SDN</p>
-              </div>
-              <div class="pt-2">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-amber-500/30 bg-amber-500/5 text-amber-400 text-xs font-semibold hover:bg-amber-500/15 transition-all">
-                  <span>View Best Paper Award Announcement</span>
-                </span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 shrink-0 self-start md:self-auto">
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900 text-slate-400 border border-slate-800">
-                2022
-              </span>
-            </div>
-          </a>
         </div>
 
         <div class="space-y-4 pt-6">
-          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider pl-1 border-b border-slate-900 pb-2">All Publications</div>
+          <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider pl-1 border-b border-slate-900 pb-2">All Publications</div>
           <div id="publications-list" class="space-y-4">
           {sortedPapers.map((paper) => {
             const hasUrl = !!paper.url;
@@ -412,7 +353,7 @@ const getAuthors = (title) => {
                 href={hasUrl ? paper.url : undefined} 
                 target={hasUrl ? "_blank" : undefined} 
                 rel={hasUrl ? "noopener noreferrer" : undefined} 
-                class="publication-item p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:bg-slate-900/20 hover:border-slate-800/80 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 block text-left cursor-pointer" 
+                class="publication-item p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:bg-slate-900/20 hover:border-slate-900 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6 block text-left cursor-pointer" 
                 data-year={parseInt(paper.year) || 0} 
                 data-citations={paper.citations || 0}
               >
@@ -421,6 +362,20 @@ const getAuthors = (title) => {
                     <div class="mb-1">
                       <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
                         🏆 Best Paper Award
+                      </span>
+                    </div>
+                  )}
+                  {paper.title.toLowerCase().includes("plebiscito") && (
+                    <div class="mb-1">
+                      <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                        🏆 Best Paper Award (Honorable Mention)
+                      </span>
+                    </div>
+                  )}
+                  {paper.title.toLowerCase().includes("programmable in-network aggregation") && (
+                    <div class="mb-1">
+                      <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                        📜 Research Paper
                       </span>
                     </div>
                   )}
@@ -434,7 +389,7 @@ const getAuthors = (title) => {
                   </h3>
                   
                   <div class="flex flex-col gap-1">
-                    <p class="text-xs text-slate-400 font-medium">
+                    <p class="text-xs text-slate-500 font-medium">
                       {getAuthors(paper.title)}
                     </p>
                     {getVenue(paper.title) && (
@@ -446,12 +401,12 @@ const getAuthors = (title) => {
                 </div>
 
                 <div class="flex items-center gap-3 shrink-0 self-start md:self-auto">
-                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900 text-slate-400 border border-slate-800">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/10 text-slate-500 border border-slate-800">
                     {paper.year || 'Preprint'}
                   </span>
                   
                   {paper.citations > 0 && (
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-950/30 text-blue-300 border border-blue-900/20">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-900/20 text-blue-300 border border-blue-900/20">
                       {paper.citations} {paper.citations === 1 ? 'Citation' : 'Citations'}
                     </span>
                   )}
@@ -466,23 +421,23 @@ const getAuthors = (title) => {
       <section id="timeline" class="space-y-8 scroll-mt-20">
         <div class="border-t border-slate-900 pt-12">
           <h2 class="text-2xl font-bold tracking-tight">Professional Journey</h2>
-          <p class="text-sm text-slate-400 mt-1">Key milestones, academic degrees, relocations, and professional positions.</p>
+          <p class="text-sm text-slate-500 mt-1">Key milestones, academic degrees, relocations, and professional positions.</p>
         </div>
 
         <div class="relative border-l border-slate-800 ml-4 md:ml-6 space-y-10 py-2">
           
           <!-- Milestone 9: PhD Graduation -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center group-hover:border-blue-400 transition-colors">
-              <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-blue-500/50 animate-pulse"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">May 2026</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">Defended PhD & Graduated</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Successfully defended the doctoral thesis titled <em class="text-slate-300">"Networking Systems for Efficient Distributed Machine Learning"</em> and graduated with a Ph.D. in Computer Science from Saint Louis University under the advisement of Dr. Flavio Esposito.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium">
                 🎓 PhD Degree
               </div>
             </div>
@@ -490,13 +445,13 @@ const getAuthors = (title) => {
 
           <!-- Milestone 8: Full-time ByteDance -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center group-hover:border-blue-400 transition-colors">
-              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-blue-500/50"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Feb 2026</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">Full-time CDN SRE @ ByteDance</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Appointed as a full-time Site Reliability Engineer (SRE) on Content Delivery Network (CDN) distributed systems performance optimization at ByteDance / TikTok. Focus on edge infrastructure monitoring, performance tuning, and automation.
               </p>
               <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-medium">
@@ -507,16 +462,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 7: ByteDance Internship -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">May 2025 - Aug 2025</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">CDN SRE Performance Evaluation Intern @ ByteDance</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Evaluated CDN platform performance with advanced machine learning techniques, analyzing metrics and identifying edge network optimizations to improve delivery speed and reduce operational costs.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium">
                 🔬 SRE Internship
               </div>
             </div>
@@ -524,16 +479,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 6: Doctoral Researcher -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Aug 2023 - May 2026</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">Doctoral Researcher @ Saint Louis University</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Focused research on resource management systems for distributed machine learning training, maximizing resource utilization, and mitigating network bandwidth bottlenecks over multi-GPU and parameter server clusters.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium">
                 📚 Research
               </div>
             </div>
@@ -541,16 +496,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 5: IMDEA Networks Internship -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">May 2022 - Aug 2022</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">5G Core System Intern @ IMDEA Networks</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Relocated to Madrid, Spain. Designed and implemented a microservices-oriented localization module compliant with 5G Core technical specifications.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium font-mono">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium font-mono">
                 🇪🇸 Madrid, Spain
               </div>
             </div>
@@ -558,16 +513,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 4: PhD Start & Relocation -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Aug 2021</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">Relocated to USA & Started PhD</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Moved from Italy to St. Louis, MO, USA, to start a Ph.D. in Computer Science at Saint Louis University, joining the research lab advised by Dr. Flavio Esposito.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium font-mono">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium font-mono">
                 ✈️ Transatlantic Move
               </div>
             </div>
@@ -575,16 +530,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 3: Cloud Engineer -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Jan 2021 - Jul 2021</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">Cloud Engineer @ Ericsson R&D</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Developed microservices-based architectures using Go, Docker, and Kubernetes. Programmed backend services with a strong focus on DevOps automation pipelines.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium">
                 💼 Industry Work
               </div>
             </div>
@@ -592,16 +547,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 2: Helsinki Internship -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Feb 2020 - Aug 2020</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">IoT Research Intern @ Ericsson Research</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Relocated to Helsinki, Finland. Conducted research on IoT protocols for robotic communication, implementing real-time SDF and GraphQL schemas.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium font-mono">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium font-mono">
                 🇫🇮 Helsinki, Finland
               </div>
             </div>
@@ -609,16 +564,16 @@ const getAuthors = (title) => {
 
           <!-- Milestone 1: BS & MS Graduation -->
           <div class="relative pl-8 md:pl-10 group">
-            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center group-hover:border-blue-400 transition-colors">
+            <div class="absolute -left-[13px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-800 flex items-center justify-center group-hover:border-blue-500/40 transition-colors">
               <span class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-blue-400 transition-colors"></span>
             </div>
             <div class="space-y-2">
               <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Oct 2020</span>
               <h3 class="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">B.S. & M.S. in Computer Engineering</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Graduated with 110/110 cum laude from the University of Naples Federico II in Italy.
               </p>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-medium">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md border border-slate-800 bg-slate-900/50 text-slate-500 text-xs font-medium">
                 🎓 University Degree
               </div>
             </div>
@@ -631,39 +586,39 @@ const getAuthors = (title) => {
       <section id="insights" class="space-y-8 scroll-mt-20">
         <div class="border-t border-slate-900 pt-12">
           <h2 class="text-2xl font-bold tracking-tight">Curiosities & Insights</h2>
-          <p class="text-sm text-slate-400 mt-1">Fun statistics and insights about my journey and background.</p>
+          <p class="text-sm text-slate-500 mt-1">Fun statistics and insights about my journey and background.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-800/80 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-900 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Lived In</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-blue-400">4</div>
-              <p class="text-xs text-slate-400 font-medium">Countries: 🇮🇹 🇫🇮 🇪🇸 🇺🇸</p>
+              <p class="text-xs text-slate-500 font-medium">Countries: 🇮🇹 🇫🇮 🇪🇸 🇺🇸</p>
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-800/80 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-900 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Companies</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100">3</div>
-              <p class="text-xs text-slate-400 font-medium">Ericsson, IMDEA, ByteDance</p>
+              <p class="text-xs text-slate-500 font-medium">Ericsson, IMDEA, ByteDance</p>
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-800/80 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-900 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Relocations</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100">4</div>
-              <p class="text-xs text-slate-400 font-medium">Naples ➔ Helsinki ➔ Madrid ➔ USA</p>
+              <p class="text-xs text-slate-500 font-medium">Naples ➔ Helsinki ➔ Madrid ➔ USA</p>
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-800/80 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 hover:border-slate-900 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Languages</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100">3</div>
-              <p class="text-xs text-slate-400 font-medium">Italian, English, Spanish</p>
+              <p class="text-xs text-slate-500 font-medium">Italian, English, Spanish</p>
             </div>
           </div>
         </div>
@@ -671,7 +626,7 @@ const getAuthors = (title) => {
         <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/5 flex flex-col sm:flex-row gap-6 items-center justify-between">
           <div class="space-y-2">
             <h3 class="text-md font-bold text-slate-200">System Scaling & Lifespan Curiosities</h3>
-            <p class="text-xs text-slate-400 leading-relaxed max-w-2xl">
+            <p class="text-xs text-slate-500 leading-relaxed max-w-2xl">
               From working on robotic IoT data transmission in Helsinki to 5G core systems in Madrid, and now scaling performance at ByteDance/TikTok for Content Delivery Networks (CDN) with hundreds of millions of daily active users. In my academic life, I enjoy applying Machine Learning to network routing optimizations.
             </p>
           </div>
@@ -683,18 +638,18 @@ const getAuthors = (title) => {
       <section id="contact" class="space-y-8 scroll-mt-20">
         <div class="border-t border-slate-900 pt-12">
           <h2 class="text-2xl font-bold tracking-tight">Get In Touch</h2>
-          <p class="text-sm text-slate-400 mt-1">Let's connect or discuss research opportunities.</p>
+          <p class="text-sm text-slate-500 mt-1">Let's connect or discuss research opportunities.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="p-8 rounded-2xl border border-slate-900 bg-slate-900/10 space-y-6">
             <h3 class="text-lg font-semibold">Contact Information</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
+            <p class="text-sm text-slate-500 leading-relaxed">
               Whether you want to discuss site reliability engineering, network systems research, or potential collaborations, feel free to drop a message.
             </p>
             <div class="space-y-4">
               <a href="mailto:andrea.pinto.1@slu.edu" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors group">
-                <span class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-blue-500/20">
+                <span class="p-2.5 rounded-lg bg-slate-900/10 border border-slate-800 group-hover:border-blue-500/20">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 17.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
@@ -707,21 +662,21 @@ const getAuthors = (title) => {
           <div class="p-8 rounded-2xl border border-slate-900 bg-slate-900/10 flex flex-col justify-between gap-6">
             <div class="space-y-4">
               <h3 class="text-lg font-semibold">Online Profiles & CV</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed">
                 Connect with me on social platforms, check out my code repositories, or view my professional curriculum vitae.
               </p>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-              <a href="https://www.linkedin.com/in/andreapinto1994/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
+              <a href="https://www.linkedin.com/in/andreapinto1994/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/andreapinto94" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
+              <a href="https://github.com/andreapinto94" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
                 <span>GitHub</span>
               </a>
-              <a href="https://www.instagram.com/andre_pinto94/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
+              <a href="https://www.instagram.com/andre_pinto94/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-center text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2">
                 <span>Instagram</span>
               </a>
-              <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 text-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-all flex items-center justify-center gap-1.5">
+              <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/50/10 text-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-all flex items-center justify-center gap-1.5">
                 <span>Resume PDF</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -765,13 +720,13 @@ const getAuthors = (title) => {
 
         btnCitations.addEventListener('click', () => {
           btnCitations.className = "px-3 py-1.5 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-sm transition-all cursor-pointer";
-          btnYear.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-slate-200 transition-all cursor-pointer";
+          btnYear.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-slate-500 hover:text-slate-200 transition-all cursor-pointer";
           sortItems('citations');
         });
 
         btnYear.addEventListener('click', () => {
           btnYear.className = "px-3 py-1.5 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-sm transition-all cursor-pointer";
-          btnCitations.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-slate-200 transition-all cursor-pointer";
+          btnCitations.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-slate-500 hover:text-slate-200 transition-all cursor-pointer";
           sortItems('year');
         });
       }
@@ -811,5 +766,8 @@ const getAuthors = (title) => {
       </div>
     </footer>
 
+  
+    <!-- UI Interactions -->
+    <script src="/ui.js" defer></script>
   </body>
 </html>

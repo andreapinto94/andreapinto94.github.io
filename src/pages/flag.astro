@@ -1,0 +1,206 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>FLAG | Programmable In-Network Aggregation | Andrea Pinto</title>
+    <meta name="description" content="Programmable In-Network Aggregation for Communication-Aware Federated Learning in 5G RANs" />
+    <meta name="author" content="Andrea Pinto" />
+    <link rel="canonical" href="https://andreapinto94.github.io/flag" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreapinto94.github.io/flag" />
+    <meta property="og:title" content="FLAG | Programmable In-Network Aggregation | Andrea Pinto" />
+    <meta property="og:description" content="Programmable In-Network Aggregation for Communication-Aware Federated Learning in 5G RANs" />
+    <meta property="og:image" content="https://andreapinto94.github.io/docs/flag.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://andreapinto94.github.io/flag" />
+    <meta property="twitter:title" content="FLAG | Programmable In-Network Aggregation | Andrea Pinto" />
+    <meta property="twitter:description" content="Programmable In-Network Aggregation for Communication-Aware Federated Learning in 5G RANs" />
+    <meta property="twitter:image" content="https://andreapinto94.github.io/docs/flag.jpeg" />
+    
+    <!-- JSON-LD Structured Data / Schema Markup -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Programmable In-Network Aggregation for Communication-Aware Federated Learning in 5G RANs",
+        "author": [
+          {"@type": "Person", "name": "Emilio Paolini"},
+          {"@type": "Person", "name": "Andrea Pinto"},
+          {"@type": "Person", "name": "Luca Valcarenghi"}
+        ],
+        "publisher": {"@type": "Organization", "name": "IEEE TNSM"},
+        "datePublished": "2026"
+      }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+    <style is:global>
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500/30 selection:text-blue-200 relative overflow-x-hidden">
+    
+    <!-- Background Glow Blobs -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none -z-10 opacity-20 overflow-hidden">
+      <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] rounded-full bg-blue-900/50 blur-[120px]"></div>
+      <div class="absolute top-[20%] right-[-10%] w-[45%] h-[50%] rounded-full bg-slate-900/50 blur-[130px]"></div>
+    </div>
+
+    <main class="max-w-3xl mx-auto px-6 py-16 space-y-10">
+      
+      <!-- Back Button -->
+      <div>
+        <a href="/" class="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-100 transition-colors group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+
+      <!-- Header Section -->
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+          📜 Research Paper
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-slate-100 via-blue-100 to-blue-400 bg-clip-text text-transparent">
+          Programmable In-Network Aggregation for Communication-Aware Federated Learning in 5G RANs
+        </h1>
+        
+        <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-slate-500 font-medium">
+          <div>
+            <span class="text-slate-600">Authors:</span> <strong class="text-slate-200">Emilio Paolini, Andrea Pinto, and Prof. Luca Valcarenghi</strong>
+          </div>
+          <div>
+            <span class="text-slate-600">Venue:</span> <strong class="text-slate-200">IEEE Transactions on Network and Service Management (TNSM)</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 py-2 border-y border-slate-900">
+        <a href="https://ieeexplore.ieee.org/document/11536094" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500/50 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all flex items-center gap-2 cursor-pointer">
+          <span>View on IEEE Xplore</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=it&user=cM30-0YAAAAJ&citation_for_view=cM30-0YAAAAJ:5nxA0vEk-isC" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-slate-300 hover:text-slate-100 font-medium text-sm transition-all flex items-center gap-2 cursor-pointer">
+          <span>Google Scholar</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Highlights Section -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold tracking-tight text-slate-100">Project Highlights</h2>
+        
+        <div class="p-8 rounded-2xl border border-slate-900 bg-slate-900/10 space-y-6 text-slate-300 leading-relaxed text-sm md:text-base border-l-4 border-l-blue-500">
+          <p class="font-medium text-slate-200">
+            "What if the (computer) network could help train AI models instead of just carrying their traffic?"
+          </p>
+          <p>
+            Our idea was that communication and learning should not be treated as separate layers. By making the network an active participant in the training loop, we can accelerate distributed AI at the wireless edge.
+          </p>
+          <p>
+            Experts may have seen in-network aggregation before, but our <strong class="text-blue-400">FLAG 🏁</strong> embeds line-rate model aggregation directly into the 5G gNB data plane. We also introduce loss-tolerant aggregation and deadline-aware scheduling mechanisms to preserve convergence while reducing communication bottlenecks.
+          </p>
+          <p class="text-xs text-slate-500 mt-4">
+            <em>This research was supported by the National Science Foundation (NSF) and the European Union with SMARTY.</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- Abstract Section -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold tracking-tight text-slate-100">Abstract</h2>
+        
+        <div class="p-8 rounded-2xl border border-slate-900 bg-slate-900/10 space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
+          <p>
+            Federated Learning (FL) enables collaborative model training without sharing raw data, making it attractive for privacy-preserving applications at the wireless edge. However, when executed over real 5G networks, FL performance degrades due to uplink congestion, heterogeneous client capabilities, and intermittent connectivity. Most existing approaches attempt to mitigate these issues indirectly by optimizing clients (through adaptive participation, local training, or selection strategies) or by optimizing models (via pruning, quantization, or compression), but they ignore potential network bottlenecks. 
+          </p>
+          <p>
+            This paper introduces <strong>FLAG</strong>, an FL architecture that embeds in-network aggregation directly into 5G gNodeBs, transforming the network into an active participant in the learning process. In particular, FLAG performs parameter aggregation at line rate within the 5G Service Data Adaptation Protocol layer and incorporates three mechanisms: Partial-Contribution Correction for loss-tolerant averaging, a timer-driven pipeline for real-time scheduling, and a deadline-based grouping strategy to mitigate stragglers. 
+          </p>
+          <p>
+            Experiments with realistic wireless emulation show that FLAG achieves up to 5.1× faster time-to-accuracy and maintains accuracy within 0.8% of a loss-free baseline, while reducing gNB-to-server bandwidth by aggregating per-gNB rather than per-client. FLAG requires no modifications to clients or the parameter server, demonstrating how 5G-aware system design can make federated learning scalable, efficient, and resilient under real-world wireless conditions.
+          </p>
+          <p class="text-xs text-slate-500 font-medium">
+            <strong>Index Terms</strong>—Federated Learning, Mobile Networks, Wireless, In-Network Aggregation, Grouping.
+          </p>
+        </div>
+      </div>
+
+      <!-- Architecture Section -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold tracking-tight text-slate-100">System Architecture</h2>
+        
+        <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 flex flex-col items-center space-y-4">
+          <div class="w-full rounded-xl overflow-hidden border border-slate-900 bg-slate-950 p-4 flex items-center justify-center">
+            <img 
+              src="/docs/flag.jpeg" 
+              alt="FLAG System Architecture Diagram" 
+              class="max-w-full h-auto object-contain max-h-[500px]"
+            />
+          </div>
+          <div class="text-xs text-slate-500 font-medium flex flex-wrap items-center justify-between w-full gap-2">
+            <span>Programmable In-Network Aggregation directly into 5G gNodeBs.</span>
+            <a 
+              href="/docs/flag.jpeg" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+            >
+              <span>View Full Image</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 py-8 mt-24">
+      <div class="max-w-3xl mx-auto px-6 flex items-center justify-between text-xs text-slate-500 font-medium">
+        <p>&copy; {new Date().getFullYear()} Andrea Pinto. All rights reserved.</p>
+        <p>FLAG Paper</p>
+      </div>
+    </footer>
+
+  
+    <!-- UI Interactions -->
+    <script src="/ui.js" defer></script>
+  </body>
+</html>

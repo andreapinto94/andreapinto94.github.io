@@ -14,24 +14,41 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
-    <title>Ph.D. Dissertation | Andrea Pinto</title>
-    <meta name="description" content="ARCHITECTURES AND PROTOCOLS FOR ORCHESTRATION OF DISTRIBUTED LEARNING SYSTEMS - Ph.D. Dissertation by Andrea Pinto" />
+    <title>Plebiscito | Distributed Learning Workloads | Andrea Pinto</title>
+    <meta name="description" content="Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads" />
     <meta name="author" content="Andrea Pinto" />
-    <link rel="canonical" href="https://andreapinto94.github.io/phd-thesis" />
+    <link rel="canonical" href="https://andreapinto94.github.io/plebiscito" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://andreapinto94.github.io/phd-thesis" />
-    <meta property="og:title" content="Ph.D. Dissertation | Andrea Pinto" />
-    <meta property="og:description" content="ARCHITECTURES AND PROTOCOLS FOR ORCHESTRATION OF DISTRIBUTED LEARNING SYSTEMS - Ph.D. Dissertation by Andrea Pinto" />
-    <meta property="og:image" content="https://andreapinto94.github.io/docs/ThesisArchitecture.png" />
+    <meta property="og:url" content="https://andreapinto94.github.io/plebiscito" />
+    <meta property="og:title" content="Plebiscito | Distributed Learning Workloads | Andrea Pinto" />
+    <meta property="og:description" content="Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads" />
+    <meta property="og:image" content="https://andreapinto94.github.io/docs/plebi.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://andreapinto94.github.io/phd-thesis" />
-    <meta property="twitter:title" content="Ph.D. Dissertation | Andrea Pinto" />
-    <meta property="twitter:description" content="ARCHITECTURES AND PROTOCOLS FOR ORCHESTRATION OF DISTRIBUTED LEARNING SYSTEMS - Ph.D. Dissertation by Andrea Pinto" />
-    <meta property="twitter:image" content="https://andreapinto94.github.io/docs/ThesisArchitecture.png" />
+    <meta property="twitter:url" content="https://andreapinto94.github.io/plebiscito" />
+    <meta property="twitter:title" content="Plebiscito | Distributed Learning Workloads | Andrea Pinto" />
+    <meta property="twitter:description" content="Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads" />
+    <meta property="twitter:image" content="https://andreapinto94.github.io/docs/plebi.png" />
+    
+    <!-- JSON-LD Structured Data / Schema Markup -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads",
+        "author": [
+          {"@type": "Person", "name": "Andrea Pinto"},
+          {"@type": "Person", "name": "Stefano Galantino"},
+          {"@type": "Person", "name": "Fulvio Risso"},
+          {"@type": "Person", "name": "Flavio Esposito"}
+        ],
+        "publisher": {"@type": "Organization", "name": "IFIP Networking"},
+        "datePublished": "2026"
+      }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,39 +87,36 @@ import '../styles/global.css';
 
       <!-- Header Section -->
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-semibold uppercase tracking-wider">
-          🎓 Ph.D. Dissertation (2026)
-        </div>
+        <a href="/docs/honorable_mention_best_paper_award_Andrea_Pinto_Stefano_Galantino_Fulvio_Risso_Flavio_Esposito.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/20 bg-amber-500/5 hover:bg-amber-500/50/10 text-amber-400 text-xs font-semibold uppercase tracking-wider cursor-pointer transition-colors">
+          🏆 Best Paper Award (Honorable Mention)
+        </a>
         
         <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-slate-100 via-blue-100 to-blue-400 bg-clip-text text-transparent">
-          ARCHITECTURES AND PROTOCOLS FOR ORCHESTRATION OF DISTRIBUTED LEARNING SYSTEMS
+          Plebiscito: A Decentralized, Bandwidth-Aware Architecture for Distributed Learning Workloads
         </h1>
         
         <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-slate-500 font-medium">
           <div>
-            <span class="text-slate-600">Author:</span> <strong class="text-slate-200">Andrea Pinto</strong>
+            <span class="text-slate-600">Authors:</span> <strong class="text-slate-200">Andrea Pinto, Stefano Galantino, Fulvio Risso, & Flavio Esposito</strong>
           </div>
           <div>
-            <span class="text-slate-600">Institution:</span> <strong class="text-slate-200">Saint Louis University</strong>
-          </div>
-          <div>
-            <span class="text-slate-600">Advisor:</span> <strong class="text-slate-200">Dr. Flavio Esposito</strong>
+            <span class="text-slate-600">Venue:</span> <strong class="text-slate-200">IFIP Networking</strong>
           </div>
         </div>
       </div>
 
       <!-- Action Buttons -->
       <div class="flex flex-wrap items-center gap-4 py-2 border-y border-slate-900">
-        <a href="/docs/Andrea_Pinto-PhD-Thesis.pdf" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500/50 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all flex items-center gap-2 cursor-pointer">
-          <span>Read Full Thesis PDF</span>
+        <a href="https://opendl.ifip-tc6.org/db/conf/networking/networking2026/1571261587.pdf" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500/50 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all flex items-center gap-2 cursor-pointer">
+          <span>Read Paper PDF</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
           </svg>
         </a>
-        <a href="/docs/Andrea_Pinto-PhD-Thesis.pdf" download class="px-5 py-2.5 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-slate-300 hover:text-slate-100 font-medium text-sm transition-all flex items-center gap-2 cursor-pointer">
-          <span>Download PDF</span>
+        <a href="https://www.linkedin.com/posts/flavioesposito_nsf-activity-7465757552048369664-ff73" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-900/10 text-slate-300 hover:text-slate-100 font-medium text-sm transition-all flex items-center gap-2 cursor-pointer">
+          <span>LinkedIn Post</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
           </svg>
         </a>
       </div>
@@ -113,19 +127,16 @@ import '../styles/global.css';
         
         <div class="p-8 rounded-2xl border border-slate-900 bg-slate-900/10 space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
           <p>
-            Machine learning (ML) systems are rapidly growing in size and complexity. Computation has scaled through specialized accelerators and distributed clusters. However, the network is now a performance bottleneck, limiting model convergence speed. Therefore, resource orchestration must account for synchronization delays and bandwidth contention. These factors increasingly dominate training times. Existing solutions are insufficient because they often orchestrate compute and network resources in isolation.
+            As large-scale AI training increasingly relies on distributed GPU clusters, data-center network bandwidth has become a critical bottleneck. Existing systems often overlook real-time link utilization during job placement, leading to suboptimal scheduling decisions that exacerbate congestion and increase Job Completion Time (JCT).
           </p>
           <p>
-            Both data centers and edge environments experience this strain. In this dissertation, we show that computing and network resources must be optimized simultaneously. To address this, we develop joint orchestration and networking solutions for both data centers and the edge.
+            To address this gap, we introduce <strong>Plebiscito</strong>, a policy-based architecture that enables bandwidth-aware job placement in distributed AI training clusters. Using a distributed max-consensus auction protocol, nodes autonomously bid on incoming jobs based on local resource availability and network conditions.
           </p>
           <p>
-            In data centers, existing orchestration systems lack network-aware controllers. To address this, we introduce <strong>Plebiscito</strong>, a joint resource- and network-aware scheduler. Plebiscito optimizes job placement and manages network resources natively. We show that this approach reduces network contention, significantly improving job completion time and cluster throughput for ML workloads.
+            We formulate this as a network utility maximization problem and prove that our decentralized algorithm achieves a (1 - 1/e) optimality bound. Experiments on a Kubernetes-based prototype and through large-scale, trace-driven simulation show that Plebiscito reduces JCT, improves bandwidth utilization, and lowers allocation failure rates compared to bandwidth-agnostic baselines.
           </p>
-          <p>
-            Moreover, deploying distributed ML on the edge presents complementary challenges. Edge devices face constrained compute and unstable connectivity. Motivated by Federated Learning (FL), we introduce systems to accelerate training and optimize network utilization. First, we exploit the programmable 5G stack for in-network aggregation. Offloading parameter aggregation to the radio access network (gNB) cuts latency and improves time-to-accuracy. Second, we develop Split Federated Learning (SFL). This hybrid approach partitions models across devices and servers, improving computation efficiency. Finally, we use Large Language Models (LLMs) to improve the selection of FL clients. These models adapt to dynamic conditions in real-time. We show that they outperform traditional rigid heuristics by leveraging client state and data availability.
-          </p>
-          <p>
-            Ultimately, these complementary mechanisms improve distributed ML performance. These results offer new network-aware orchestration solutions for both large-scale clusters and diverse wireless edge networks.
+          <p class="text-xs text-slate-500 font-medium">
+            <strong>Index Terms</strong>—Distributed Training, Resource Orchestration, Network Management, Data Center Systems, Bandwidth-Aware Allocation, Distributed Auctions.
           </p>
         </div>
       </div>
@@ -135,22 +146,22 @@ import '../styles/global.css';
         <h2 class="text-xl font-bold tracking-tight text-slate-100">System Architecture</h2>
         
         <div class="p-6 rounded-2xl border border-slate-900 bg-slate-900/10 flex flex-col items-center space-y-4">
-          <div class="w-full rounded-xl overflow-hidden border border-slate-900 bg-slate-950 p-4 flex items-center justify-center">
+          <div class="w-full rounded-xl overflow-hidden border border-slate-900 bg-slate-950 p-4 flex items-center justify-center bg-slate-900/10/5">
             <img 
-              src="/docs/ThesisArchitecture.png" 
-              alt="PhD Thesis System Architecture Diagram" 
+              src="/docs/plebi.png" 
+              alt="Plebiscito System Architecture Diagram" 
               class="max-w-full h-auto object-contain max-h-[500px]"
             />
           </div>
           <div class="text-xs text-slate-500 font-medium flex flex-wrap items-center justify-between w-full gap-2">
-            <span>Orchestration architecture of distributed learning systems.</span>
+            <span>A decentralized architecture for bandwidth-aware job placement using distributed auctions.</span>
             <a 
-              href="/docs/ThesisArchitecture.pdf" 
+              href="/docs/plebi.png" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors font-semibold"
             >
-              <span>View PDF Version</span>
+              <span>View Full Image</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
               </svg>
@@ -165,7 +176,7 @@ import '../styles/global.css';
     <footer class="border-t border-slate-900 py-8 mt-24">
       <div class="max-w-3xl mx-auto px-6 flex items-center justify-between text-xs text-slate-500 font-medium">
         <p>&copy; {new Date().getFullYear()} Andrea Pinto. All rights reserved.</p>
-        <p>Ph.D. Dissertation Page</p>
+        <p>Plebiscito Paper</p>
       </div>
     </footer>
 
