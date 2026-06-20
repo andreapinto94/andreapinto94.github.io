@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   });
 
@@ -134,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.1, 
     rootMargin: '-100px 0px -40% 0px' 
   });
 
