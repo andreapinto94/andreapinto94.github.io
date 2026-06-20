@@ -1,11 +1,11 @@
 import json
 import os
-from scholarly import scholarly
 
 # Your exact Google Scholar ID
 AUTHOR_ID = 'cM30-0YAAAAJ'
 
 def fetch_data():
+    from scholarly import scholarly
     print(f"Fetching Google Scholar profile for {AUTHOR_ID}...")
     
     # We only request the main profile page to avoid IP blocks from Google.
@@ -42,12 +42,10 @@ def fetch_data():
     print("Successfully saved data to src/data/scholar.json")
 
 if __name__ == '__main__':
-    if os.environ.get('GITHUB_ACTIONS') == 'true':
-        print("Running in GitHub Actions environment. Skipping Google Scholar fetch to avoid rate limits and timeouts.")
-        print("Using the existing committed src/data/scholar.json data.")
-    else:
-        try:
-            fetch_data()
-        except Exception as e:
-            print(f"WARNING: Failed to fetch fresh data from Google Scholar: {e}")
-            print("Using the existing committed src/data/scholar.json file instead.")
+    try:
+        fetch_data()
+    except Exception as e:
+        print(f"WARNING: Failed to fetch fresh data from Google Scholar: {e}")
+        print("Using the existing committed src/data/scholar.json data to preserve build stability.")
+        import sys
+        sys.exit(0)

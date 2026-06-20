@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initUI() {
   // --- SCROLL ANIMATIONS ---
   const animateElements = document.querySelectorAll('.publication-item');
   
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header.innerHTML = `
       <div class="flex items-center justify-between w-full gap-4">
         <span>${headerContent}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="chevron w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="chevron w-6 h-6 text-slate-400 group-hover:text-cyan-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const chevron = document.createElement('div');
       chevron.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-transform duration-300 chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 group-hover:text-cyan-500 transition-transform duration-300 chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       `;
@@ -113,6 +113,46 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // --- CITE BUTTON CLIPBOARD COPY ---
+  const citeBtns = document.querySelectorAll('.cite-btn');
+  citeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const title = btn.getAttribute('data-title');
+      const year = btn.getAttribute('data-year');
+      const venue = btn.getAttribute('data-venue') || 'Google Scholar';
+      const authors = btn.getAttribute('data-authors');
+      const url = btn.getAttribute('data-url') || '';
+      
+      // Generate citation key: e.g. pinto2023privacy
+      const firstAuthorWord = authors.split(',')[0].split(' ').filter(Boolean).pop()?.toLowerCase() || 'pinto';
+      const firstTitleWord = title.split(' ')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+      const citeKey = `${firstAuthorWord}${year}${firstTitleWord}`;
+      
+      const bibtex = `@inproceedings{${citeKey},
+  title={${title}},
+  author={${authors}},
+  booktitle={${venue}},
+  year={${year}},
+  url={${url}}
+}`;
+
+      navigator.clipboard.writeText(bibtex).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span>Copied! ✓</span>';
+        btn.classList.add('border-cyan-500', 'text-cyan-400');
+        btn.classList.remove('text-slate-400', 'border-slate-800');
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('border-cyan-500', 'text-cyan-400');
+          btn.classList.add('text-slate-400', 'border-slate-800');
+        }, 2000);
+      });
+    });
+  });
+
   // --- SCROLL SPY (SIDEBAR HIGHLIGHTING) ---
   const sections = document.querySelectorAll('section[id]');
   const sidebarLinks = document.querySelectorAll('#sidebar-nav a.sidebar-link');
@@ -123,10 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeSectionId = entry.target.id;
         sidebarLinks.forEach(link => {
           if (link.getAttribute('href') === `#${activeSectionId}`) {
-            link.classList.add('text-slate-100', 'border-blue-500');
+            link.classList.add('text-slate-100', 'border-cyan-500');
             link.classList.remove('text-slate-400', 'border-transparent');
           } else {
-            link.classList.remove('text-slate-100', 'border-blue-500');
+            link.classList.remove('text-slate-100', 'border-cyan-500');
             link.classList.add('text-slate-400', 'border-transparent');
           }
         });
@@ -137,4 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   sections.forEach(section => scrollSpyObserver.observe(section));
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initUI);
+} else {
+  initUI();
+}

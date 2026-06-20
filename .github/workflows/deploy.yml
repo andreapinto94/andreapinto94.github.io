@@ -28,9 +28,11 @@ jobs:
           
       - name: Install Python dependencies
         run: pip install scholarly
+        continue-on-error: true
         
       - name: Fetch Google Scholar Data
         run: python scripts/fetch_scholar.py
+        continue-on-error: true
         
       - name: Setup Node
         uses: actions/setup-node@v4
