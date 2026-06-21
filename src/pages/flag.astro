@@ -42,10 +42,11 @@ import '../styles/global.css';
         "author": [
           {"@type": "Person", "name": "Emilio Paolini"},
           {"@type": "Person", "name": "Andrea Pinto"},
-          {"@type": "Person", "name": "Luca Valcarenghi"}
+          {"@type": "Person", "name": "Luca Valcarenghi"},
+          {"@type": "Person", "name": "Flavio Esposito"}
         ],
-        "publisher": {"@type": "Organization", "name": "IEEE TNSM"},
-        "datePublished": "2026"
+        "publisher": {"@type": "Organization", "name": "IEEE"},
+        "datePublished": "2026-05-27"
       }
     </script>
     
@@ -60,10 +61,10 @@ import '../styles/global.css';
 
     <style is:global>
       body {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
       }
     </style>
   </head>
@@ -84,7 +85,7 @@ import '../styles/global.css';
 
       <!-- Header Section -->
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-xs font-semibold font-mono uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded border-l-2 border-cyan-500 rounded-none bg-cyan-500/5 text-cyan-400 text-xs font-semibold font-mono uppercase tracking-wider">
           📜 Research Paper
         </div>
         
@@ -94,7 +95,7 @@ import '../styles/global.css';
         
         <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-slate-500 font-medium font-mono">
           <div>
-            <span class="text-slate-650">Authors:</span> <strong class="text-slate-200">Emilio Paolini, Andrea Pinto, and Prof. Luca Valcarenghi</strong>
+            <span class="text-slate-650">Authors:</span> <strong class="text-slate-200">Emilio Paolini, Andrea Pinto, Luca Valcarenghi, and Flavio Esposito</strong>
           </div>
           <div>
             <span class="text-slate-650">Venue:</span> <strong class="text-slate-200">IEEE Transactions on Network and Service Management (TNSM)</strong>
@@ -122,7 +123,7 @@ import '../styles/global.css';
       <div class="space-y-6">
         <h2 class="text-xl font-bold tracking-tight text-slate-100 font-mono border-l-2 border-cyan-500 pl-3">Project Highlights</h2>
         
-        <div class="p-8 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md space-y-6 text-slate-300 leading-relaxed text-sm md:text-base border-l-4 border-l-cyan-500">
+        <div class="p-8 rounded border border-slate-800 bg-transparent space-y-6 text-slate-300 leading-relaxed text-sm md:text-base border-l-4 border-l-cyan-500">
           <p class="font-medium text-slate-200">
             "What if the (computer) network could help train AI models instead of just carrying their traffic?"
           </p>
@@ -142,7 +143,7 @@ import '../styles/global.css';
       <div class="space-y-6">
         <h2 class="text-xl font-bold tracking-tight text-slate-100 font-mono border-l-2 border-cyan-500 pl-3">Abstract</h2>
         
-        <div class="p-8 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
+        <div class="p-8 rounded border border-slate-800 bg-transparent space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
           <p>
             Federated Learning (FL) enables collaborative model training without sharing raw data, making it attractive for privacy-preserving applications at the wireless edge. However, when executed over real 5G networks, FL performance degrades due to uplink congestion, heterogeneous client capabilities, and intermittent connectivity. Most existing approaches attempt to mitigate these issues indirectly by optimizing clients (through adaptive participation, local training, or selection strategies) or by optimizing models (via pruning, quantization, or compression), but they ignore potential network bottlenecks. 
           </p>
@@ -162,7 +163,7 @@ import '../styles/global.css';
       <div class="space-y-6">
         <h2 class="text-xl font-bold tracking-tight text-slate-100 font-mono border-l-2 border-cyan-500 pl-3">System Architecture</h2>
         
-        <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md flex flex-col items-center space-y-4">
+        <div class="p-6 rounded border border-slate-800 bg-transparent flex flex-col items-center space-y-4">
           <div class="w-full rounded border border-slate-800 bg-slate-950 p-4 flex items-center justify-center">
             <img 
               src="/docs/flag.webp" 

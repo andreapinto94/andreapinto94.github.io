@@ -44,10 +44,10 @@ import '../styles/global.css';
 
     <style is:global>
       body {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
       }
     </style>
   </head>
@@ -68,7 +68,7 @@ import '../styles/global.css';
 
       <!-- Header Section -->
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-xs font-semibold font-mono uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded border-l-2 border-cyan-500 rounded-none bg-cyan-500/5 text-cyan-400 text-xs font-semibold font-mono uppercase tracking-wider">
           🎓 Ph.D. Dissertation (2026)
         </div>
         
@@ -109,7 +109,7 @@ import '../styles/global.css';
       <div class="space-y-6">
         <h2 class="text-xl font-bold tracking-tight text-slate-100 font-mono border-l-2 border-cyan-500 pl-3">Abstract</h2>
         
-        <div class="p-8 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
+        <div class="p-8 rounded border border-slate-800 bg-transparent space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
           <p>
             Machine learning (ML) systems are rapidly growing in size and complexity. Computation has scaled through specialized accelerators and distributed clusters. However, the network is now a performance bottleneck, limiting model convergence speed. Therefore, resource orchestration must account for synchronization delays and bandwidth contention. These factors increasingly dominate training times. Existing solutions are insufficient because they often orchestrate compute and network resources in isolation.
           </p>
@@ -132,7 +132,7 @@ import '../styles/global.css';
       <div class="space-y-6">
         <h2 class="text-xl font-bold tracking-tight text-slate-100 font-mono border-l-2 border-cyan-500 pl-3">System Architecture</h2>
         
-        <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md flex flex-col items-center space-y-4">
+        <div class="p-6 rounded border border-slate-800 bg-transparent flex flex-col items-center space-y-4">
           <div class="w-full rounded border border-slate-800 bg-slate-950 p-4 flex items-center justify-center">
             <img 
               src="/docs/ThesisArchitecture.webp" 

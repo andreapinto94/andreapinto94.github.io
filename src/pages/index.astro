@@ -29,6 +29,7 @@ const getVenue = (title) => {
   if (t.includes("trireme:")) return "ICS";
   if (t.includes("rubix:")) return "IPDPS";
   if (t.includes("flllm:")) return "Under Submission";
+  if (t.includes("programmable in-network aggregation")) return "IEEE TNSM";
   return "";
 };
 
@@ -47,6 +48,7 @@ const getAuthors = (title) => {
   if (t.includes("trireme")) return "A. Samanta, A. Pinto, & F. Esposito";
   if (t.includes("rubix")) return "A. Samanta, A. Pinto, & F. Esposito";
   if (t.includes("flllm")) return "A. Pinto, E. Paolini, & F. Esposito";
+  if (t.includes("programmable in-network aggregation")) return "E. Paolini, A. Pinto, L. Valcarenghi, & F. Esposito";
   return "A. Pinto, G. Santaromita, C. Fiandrino, D. Giustiniano, & F. Esposito";
 };
 ---
@@ -180,7 +182,7 @@ const getAuthors = (title) => {
       
       <!-- Sticky Sidebar -->
       <aside class="hidden lg:block w-48 shrink-0 sticky top-24 self-start">
-        <div class="space-y-6 pb-12 h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar border border-slate-800 bg-slate-950/40 backdrop-blur-md p-5 rounded-2xl">
+        <div class="space-y-6 pb-12 h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar border border-slate-800 bg-transparent p-5 rounded-2xl">
           <a href="#" class="block text-lg font-bold text-slate-100 uppercase tracking-wider pl-2 hover:text-cyan-400 transition-colors font-mono">Andrea Pinto</a>
           <nav id="sidebar-nav" class="flex flex-col gap-1 border-l border-slate-800">
             <a href="#about" class="sidebar-link px-4 py-2 text-sm text-slate-400 hover:text-slate-100 border-l-2 border-transparent hover:border-cyan-500 transition-colors">About</a>
@@ -213,7 +215,7 @@ const getAuthors = (title) => {
       <!-- Hero / About Section -->
       <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-8" itemscope itemtype="https://schema.org/Person">
         <div class="md:col-span-7 space-y-6 order-2 md:order-1">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-xs font-mono font-medium">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border-l-2 border-cyan-500 rounded-none bg-cyan-500/5 text-cyan-400 text-xs font-mono font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
             CDN SRE @ ByteDance | PhD in Computer Science
           </div>
@@ -279,19 +281,19 @@ const getAuthors = (title) => {
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all relative overflow-hidden group">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all relative overflow-hidden group">
             <div class="absolute -right-4 -bottom-4 text-slate-850/40 text-8xl font-black group-hover:scale-110 transition-transform duration-300">#</div>
             <span class="text-xs font-semibold text-slate-500 tracking-wider uppercase font-mono">Total Citations</span>
             <div class="text-4xl md:text-5xl font-black text-cyan-400 mt-2 font-mono">{scholarData.citedby}</div>
           </div>
           
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all relative overflow-hidden group">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all relative overflow-hidden group">
             <div class="absolute -right-4 -bottom-4 text-slate-850/40 text-8xl font-black group-hover:scale-110 transition-transform duration-300">h</div>
             <span class="text-xs font-semibold text-slate-500 tracking-wider uppercase font-mono">h-index</span>
             <div class="text-4xl md:text-5xl font-black text-slate-100 mt-2 font-mono">{scholarData.hindex}</div>
           </div>
 
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all relative overflow-hidden group">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all relative overflow-hidden group">
             <div class="absolute -right-4 -bottom-4 text-slate-850/40 text-8xl font-black group-hover:scale-110 transition-transform duration-300">i10</div>
             <span class="text-xs font-semibold text-slate-500 tracking-wider uppercase font-mono">i10-index</span>
             <div class="text-4xl md:text-5xl font-black text-slate-300 mt-2 font-mono">{scholarData.i10index}</div>
@@ -328,7 +330,7 @@ const getAuthors = (title) => {
           
           <!-- Ph.D. Thesis Card -->
           <div 
-            class="publication-item p-6 rounded border border-cyan-500/20 bg-slate-950/40 backdrop-blur-md hover:border-cyan-500/40 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6"
+            class="publication-item p-6 rounded border-l-2 border-cyan-500 rounded-none bg-transparent hover:border-cyan-500/40 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6"
           >
             <div class="space-y-2.5 max-w-3xl">
               <span class="px-2.5 py-0.5 rounded text-[10px] font-bold font-mono uppercase tracking-wider bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
@@ -378,7 +380,7 @@ const getAuthors = (title) => {
             const hasUrl = !!paper.url;
             return (
               <div 
-                class="publication-item p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6" 
+                class="publication-item p-4 sm:p-6 border-b border-slate-800 hover:bg-slate-800/30 transition-all duration-300 group flex flex-col md:flex-row md:items-center justify-between gap-6" 
                 data-year={parseInt(paper.year) || 0} 
                 data-citations={paper.citations || 0}
               >
@@ -640,7 +642,7 @@ const getAuthors = (title) => {
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider font-mono">Lived In</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-cyan-400 font-mono">4</div>
@@ -648,7 +650,7 @@ const getAuthors = (title) => {
             </div>
           </div>
 
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider font-mono">Companies</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100 font-mono">3</div>
@@ -656,7 +658,7 @@ const getAuthors = (title) => {
             </div>
           </div>
 
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider font-mono">Total Relocations</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100 font-mono">4</div>
@@ -664,7 +666,7 @@ const getAuthors = (title) => {
             </div>
           </div>
 
-          <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
+          <div class="p-6 rounded border border-slate-800 bg-transparent hover:border-slate-700/60 transition-all flex flex-col justify-between h-40">
             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider font-mono">Languages</span>
             <div class="space-y-1">
               <div class="text-4xl font-extrabold text-slate-100 font-mono">3</div>
@@ -673,7 +675,7 @@ const getAuthors = (title) => {
           </div>
         </div>
 
-        <div class="p-6 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md flex flex-col sm:flex-row gap-6 items-center justify-between">
+        <div class="p-6 rounded border border-slate-800 bg-transparent flex flex-col sm:flex-row gap-6 items-center justify-between">
           <div class="space-y-2">
             <h3 class="text-md font-bold text-slate-200">System Scaling & Lifespan Curiosities</h3>
             <p class="text-xs text-slate-500 leading-relaxed max-w-2xl">
@@ -692,7 +694,7 @@ const getAuthors = (title) => {
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md space-y-6">
+          <div class="p-8 rounded border border-slate-800 bg-transparent space-y-6">
             <h3 class="text-lg font-semibold">Contact Information</h3>
             <p class="text-sm text-slate-500 leading-relaxed">
               Whether you want to discuss site reliability engineering, network systems research, or potential collaborations, feel free to drop a message.
@@ -709,7 +711,7 @@ const getAuthors = (title) => {
             </div>
           </div>
 
-          <div class="p-8 rounded border border-slate-800 bg-slate-950/40 backdrop-blur-md flex flex-col justify-between gap-6">
+          <div class="p-8 rounded border border-slate-800 bg-transparent flex flex-col justify-between gap-6">
             <div class="space-y-4">
               <h3 class="text-lg font-semibold">Online Profiles & CV</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
@@ -729,7 +731,7 @@ const getAuthors = (title) => {
               <a href="https://www.instagram.com/andre_pinto94/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded border border-slate-800 bg-slate-950/50 hover:border-cyan-500/30 text-center text-sm font-semibold font-mono text-slate-300 hover:text-cyan-400 transition-all flex items-center justify-center gap-2">
                 <span>Instagram</span>
               </a>
-              <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="col-span-2 py-3 px-4 rounded border border-cyan-500/20 bg-cyan-500/5 hover:bg-cyan-500/10 text-center text-sm font-semibold font-mono text-cyan-400 hover:text-cyan-300 transition-all flex items-center justify-center gap-1.5">
+              <a href="/docs/AndreaPinto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="col-span-2 py-3 px-4 rounded border-l-2 border-cyan-500 rounded-none bg-cyan-500/5 hover:bg-cyan-500/10 text-center text-sm font-semibold font-mono text-cyan-400 hover:text-cyan-300 transition-all flex items-center justify-center gap-1.5">
                 <span>Resume PDF</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
