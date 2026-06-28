@@ -12,12 +12,15 @@ def fetch_data():
     author = scholarly.search_author_id(AUTHOR_ID)
     author = scholarly.fill(author, sections=['basics', 'indices', 'publications'])
     
+    from datetime import datetime
+    
     profile = {
         "name": author.get("name"),
         "affiliation": author.get("affiliation"),
         "citedby": author.get("citedby"),
         "hindex": author.get("hindex"),
         "i10index": author.get("i10index"),
+        "last_updated": datetime.now().isoformat(),
         "publications": []
     }
     
